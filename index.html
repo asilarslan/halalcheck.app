@@ -33,26 +33,47 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "MobileApplication",
-        "name": "Halal Check: AI Scanner",
-        "description": "AI-powered halal scanner app that helps you verify food and products with ease. Scan barcodes, labels, or menus to instantly check halal status with detailed ingredient analysis.",
-        "applicationCategory": "Food & Drink",
-        "operatingSystem": "iOS",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        },
-        "downloadUrl": "https://apps.apple.com/us/app/halal-check-ai-scanner/id6749597982",
-        "author": {
-            "@type": "Person",
-            "name": "Asil Arslan"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "ratingCount": "1"
-        }
+        "@graph": [
+            {
+                "@type": "MobileApplication",
+                "name": "Halal Check: AI Scanner",
+                "description": "AI-powered halal scanner app that helps you verify food and products with ease. Scan barcodes, labels, or menus to instantly check halal status with detailed ingredient analysis.",
+                "applicationCategory": "Food & Drink",
+                "operatingSystem": "iOS",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "downloadUrl": "https://apps.apple.com/us/app/halal-check-ai-scanner/id6749597982",
+                "author": {
+                    "@type": "Person",
+                    "name": "Asil Arslan"
+                },
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "5.0",
+                    "ratingCount": "1"
+                }
+            },
+            {
+                "@type": "MobileApplication",
+                "name": "Halal Check: AI Scanner",
+                "description": "AI-powered halal scanner app that helps you verify food and products with ease. Scan barcodes, labels, or menus to instantly check halal status with detailed ingredient analysis.",
+                "applicationCategory": "Food & Drink",
+                "operatingSystem": "Android",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "downloadUrl": "https://play.google.com/store/apps/details?id=app.halalcheck",
+                "author": {
+                    "@type": "Person",
+                    "name": "Asil Arslan"
+                }
+            }
+        ]
     }
     </script>
 
@@ -164,15 +185,24 @@
             transform: translateY(-2px);
         }
 
-        .app-store-badge {
-            width: 200px;
-            height: auto;
-            border-radius: 10px;
+        .store-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem 1.25rem;
+        }
+
+        .store-badge {
+            height: 48px;
+            width: auto;
+            display: block;
+            border-radius: 8px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .app-store-badge:hover {
+        .store-badge:hover {
             transform: translateY(-2px);
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
         }
@@ -532,9 +562,14 @@
             <div class="container">
                 <h1>Scan Food & Verify Halal</h1>
                 <p>Halal Check is an AI-powered halal scanner app that helps you verify food and products with ease. Scan barcodes, labels, or menus to instantly check halal status with detailed ingredient analysis.</p>
-                <a href="https://apps.apple.com/us/app/halal-check-ai-scanner/id6749597982" class="cta-button">
-                    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1704153600" alt="Download on the App Store" class="app-store-badge">
-                </a>
+                <div class="store-badges">
+                    <a href="https://apps.apple.com/us/app/halal-check-ai-scanner/id6749597982" class="cta-button" aria-label="Download on the App Store">
+                        <img src="app-store.svg" alt="Download on the App Store" class="store-badge" width="162" height="48">
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=app.halalcheck" class="cta-button" aria-label="Get it on Google Play">
+                        <img src="google-play.svg" alt="Get it on Google Play" class="store-badge" width="162" height="48">
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -636,7 +671,7 @@
         <section class="seo-content">
             <div class="container">
                 <h2>The Ultimate AI-Powered Halal Food Verification App</h2>
-                <p>Halal Check: AI Scanner revolutionizes how Muslims verify food and product halal status. Our cutting-edge artificial intelligence technology provides instant halal verification by analyzing product labels, ingredients, and certifications, making it the most comprehensive halal checking app available on iOS.</p>
+                <p>Halal Check: AI Scanner revolutionizes how Muslims verify food and product halal status. Our cutting-edge artificial intelligence technology provides instant halal verification by analyzing product labels, ingredients, and certifications, making it the most comprehensive halal checking app available on iOS and Android.</p>
                 
                 <p>Whether you're shopping for groceries, dining out, or traveling abroad, our AI-powered platform provides peace of mind with accurate halal status verification. The app recognizes and analyzes ingredients to identify pork, alcohol, non-halal gelatin, and other haram components that may not be immediately obvious.</p>
 
@@ -664,7 +699,7 @@
                 <h2>Advanced AI Technology for Accurate Results</h2>
                 <p>Our proprietary machine learning algorithms have been trained on thousands of halal food products and ingredients, ensuring high-accuracy verification that maintains religious compliance standards. The app continuously learns and improves, expanding its halal database with regular updates.</p>
 
-                <p>Halal Check works seamlessly on iPhone, iPad, and Mac, making it perfect for use at home, while shopping, or during travel. The app's intuitive interface ensures that users of all ages can navigate easily and achieve reliable halal verification results quickly.</p>
+                <p>Halal Check works seamlessly on iPhone, iPad, and Mac, as well as Android phones and tablets, making it perfect for use at home, while shopping, or during travel. The app's intuitive interface ensures that users of all ages can navigate easily and achieve reliable halal verification results quickly.</p>
             </div>
         </section>
 
@@ -672,11 +707,16 @@
             <div class="container">
                 <h2>Start Verifying Halal Products Today</h2>
                 <p>Join thousands of Muslim users who trust Halal Check for accurate halal food verification</p>
-                <a href="https://apps.apple.com/us/app/halal-check-ai-scanner/id6749597982" class="cta-button">
-                    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1704153600" alt="Download on the App Store" class="app-store-badge">
-                </a>
+                <div class="store-badges">
+                    <a href="https://apps.apple.com/us/app/halal-check-ai-scanner/id6749597982" class="cta-button" aria-label="Download on the App Store">
+                        <img src="app-store.svg" alt="Download on the App Store" class="store-badge" width="162" height="48">
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=app.halalcheck" class="cta-button" aria-label="Get it on Google Play">
+                        <img src="google-play.svg" alt="Get it on Google Play" class="store-badge" width="162" height="48">
+                    </a>
+                </div>
                 <br><br>
-                <p style="font-size: 0.9rem; opacity: 0.8;">Compatible with iPhone, iPad, and Mac • iOS 17.5+ Required • Free with Premium Options</p>
+                <p style="font-size: 0.9rem; opacity: 0.8;">iOS: iPhone, iPad, and Mac (iOS 17.5+) • Android: phones and tablets • Free with premium options</p>
             </div>
         </section>
     </main>
@@ -688,6 +728,7 @@
                 <a href="terms-of-use.html">Terms of Use</a>
                 <a href="privacy-policy.html">Privacy Policy</a>
                 <a href="https://apps.apple.com/us/app/halal-check-ai-scanner/id6749597982">App Store</a>
+                <a href="https://play.google.com/store/apps/details?id=app.halalcheck">Google Play</a>
             </div>
             <p>&copy; 2025 Halal Check by Asil Arslan. All rights reserved.</p>
             <p>Verify halal status with AI-powered scanning technology.</p>
